@@ -4,6 +4,8 @@ MAINTAINER Alex Newman <alex@newman.pro>
 # Let the container know that there is no TTY
 ENV DEBIAN_FRONTEND noninteractive
 
+VOLUME /osrm-data
+
 # Install necessary packages for proper system state
 RUN apt-get -y update && apt-get install -y \
     build-essential \
